@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
+import { Product } from './routing/routing';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'] // Correct the typo: styleUrls instead of styleUrl
 })
 export class AppComponent {
-  title = 'angular-project';
+  product: Product;
+
+  constructor() {
+    this.product = new Product('Sample Name', '1', '123');
+  }
 }
